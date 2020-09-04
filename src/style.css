@@ -1,0 +1,111 @@
+body {
+  background: #fdf9e3;
+  color: #9fd9aa;
+}
+a {
+  color: #9fd9aa;
+}
+#container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
+}
+#header {
+  position: fixed;
+  width: 100%;
+}
+#footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+#header h2,
+#footer h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+.home #content {
+  margin: 20px;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+#left-top-name {
+  writing-mode: vertical-rl;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 20px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 4px;
+  left: 0;
+}
+#right-top-name {
+  position: absolute;
+  right: 1vw;
+  top: 0;
+  margin-top: 20px;
+  margin-right: 20px;
+  text-transform: uppercase;
+  transform: rotate(180deg);
+}
+#right-bottom-name {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  right: 1vw;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  bottom: 4px;
+  position: absolute;
+}
+#left-bottom-name {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  bottom: 0px;
+  position: absolute;
+}
+#left-email,
+#right-email {
+  writing-mode: vertical-rl;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#right-email {
+  transform: rotate(180deg);
+}
+.email,
+.name {
+  color: #9fd9aa;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.heading {
+  font-size: 40px;
+  margin: 20px;
+}
+
+.heading a {
+  text-decoration: none;
+}
+
+/*  Work page */
+#key {
+  position: fixed;
+  top: 20vh;
+  margin: 20px;
+}
+#key li {
+  margin-bottom: 15px;
+}
+#key svg {
+  width: 60px;
+  height: 16px;
+}
+
+.work #content {
+  margin-top: 100px;
+}
