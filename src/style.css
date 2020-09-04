@@ -4,21 +4,25 @@ body {
 }
 a {
   color: #9fd9aa;
+  text-decoration: none;
 }
 #container {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   height: 100vh;
+  min-width: 420px;
 }
 #header {
   position: fixed;
   width: 100%;
+  min-width: 420px;
 }
 #footer {
   position: fixed;
   width: 100%;
   bottom: 0;
+  min-width: 420px;
 }
 
 #header h2,
@@ -97,15 +101,19 @@ a {
   position: fixed;
   top: 20vh;
   margin: 20px;
+  text-transform: uppercase;
 }
 #key li {
   margin-bottom: 15px;
+  padding-bottom: 4px;
+  height: 20px;
+  display: flex;
 }
 #key svg {
   width: 60px;
-  height: 16px;
+  height: 20px;
+  align-self: center;
 }
-
-.work #content {
-  margin-top: 100px;
+#key span {
+  align-self: center;
 }
