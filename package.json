@@ -1,8 +1,9 @@
 {
-  "devDependencies": {
-    "http-server-spa": "^1.3.0"
-  },
+  "devDependencies": {},
   "scripts": {
-    "serve": "http-server-spa ./src index.html 3030"
+    "serve": "serve ./src"
+  },
+  "dependencies": {
+    "serve": "^11.3.2"
   }
 }
