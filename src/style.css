@@ -1,3 +1,9 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   background: #fdf9e3;
   color: #9fd9aa;
@@ -12,6 +18,7 @@ a {
   justify-content: space-between;
   flex-direction: column;
   height: 100vh;
+  width: 100vw;
   min-width: 420px;
 }
 #header {
@@ -26,12 +33,19 @@ a {
   min-width: 420px;
 }
 
-#header h2,
-#footer h2 {
-  text-align: center;
+#header h2, #footer h2 {
   text-transform: uppercase;
   font-weight: bold;
 }
+
+#header h2 {
+    text-align: center;
+}
+
+body.home #footer h2 {
+  text-align: center;
+}
+
 body.home #content {
   margin: 20px;
   height: 100%;
@@ -51,7 +65,7 @@ body.home #content {
 #left-top-name {
   writing-mode: vertical-rl;
   position: absolute;
-  margin-top: 20px;
+  margin-top: 25px;
   margin-left: 20px;
   text-transform: uppercase;
   position: absolute;
@@ -62,7 +76,7 @@ body.home #content {
   position: absolute;
   right: 1vw;
   top: 0;
-  margin-top: 20px;
+  margin-top: 25px;
   margin-right: 20px;
   text-transform: uppercase;
   transform: rotate(180deg);
@@ -149,7 +163,7 @@ body.work-feature #description h3 {
 
 body.work-feature #description #about {
   font-size: 18px;
-  line-height: 1.5
+  line-height: 1.5;
 }
 
 body.work-feature .heading {
@@ -157,8 +171,8 @@ body.work-feature .heading {
 }
 
 body.work-feature #work {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   position: absolute;
   transform: matrix(0, 1, -1, 0, 0, 0);
   right: 0;
@@ -166,8 +180,8 @@ body.work-feature #work {
 }
 
 body.work-feature #header #about {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   position: absolute;
   transform: matrix(0, -1, 1, 0, 0, 0);
   right: -12;
@@ -180,47 +194,63 @@ body.work-feature .main {
   margin-top: 10vh;
 }
 
-body.about #footer{
-  display: flex; 
-  flex-direction: column;
-  max-height: 80vh;
-  overflow: scroll;
-}
-body.about #footer div {
-   text-align: center; 
-}
 
-@media screen and (min-width: 1000px) { 
-  body.about #footer{ 
-/*    overflow: auto; */
-   justify-content: space-between;
-   flex-direction: row;
-   align-items: auto;
-   width: 100%;
-  }
-  body.about #footer div:last-child {
-    text-align: right;
-  }
-  body.about #footer div:first-child {
-    text-align: left;
-  }
-} 
-
-
-body.about #footer > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between
-}
-
-body.about #footer div > p, li  {
-  margin-top:40px;
-  margin-bottom:40px;
-}
 
 body.about #footer li {
   font-size: large;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+body.about #footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: [detail] 1fr
+  [headers] 100px;
+  align-content: end;
+  grid-auto-flow: column;
+  min-height: 50vh;
+}
+
+body.about #footer .services {
+  text-align: left;
+  
+}
+body.about #footer .about {
+  text-align: center;
+}
+
+body.about #footer .contact {
+  text-align: right;
+}
+
+
+
+@media screen and (max-width: 500px) {
+  body.about #footer{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-flow: row;
+  }
+  body.about #footer .contact {
+    text-align: center;
+    
+  }
+  body.about #footer .about {
+    text-align: center;
+  }
+  body.about #footer .services {
+    text-align: center;
+ 
+  }
+}
+
+body.about #footer div {
+   text-align: center;
+}
+
+body.about #footer div > p, li  {
+  margin-top:40px;
+  margin-bottom:40px;
 }
 
