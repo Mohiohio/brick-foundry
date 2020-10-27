@@ -15,7 +15,6 @@ a {
 }
 #container {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
   height: 100vh;
   min-width: 420px;
@@ -28,7 +27,8 @@ a {
   width: 100vw;
 }
 #content {
-  width: 100vw;
+  flex-direction: column;
+  display: flex;
 }
 
 #footer {
@@ -131,27 +131,75 @@ body.home #content {
 }
 
 /*  Work page */
-#key {
+
+body.work #key {
   position: fixed;
   top: 20vh;
   margin: 10px;
   text-transform: uppercase;
 }
-#key li {
+body.work #key li {
   margin-bottom: 15px;
   padding-bottom: 4px;
   height: 20px;
   display: flex;
 }
-#key svg {
+body.work #key svg {
   width: 120px;
   height: 20px;
   align-self: center;
 }
-#key span {
+body.work #key span {
   align-self: center;
   font-weight: bold;
 }
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) {
+  
+    body.work #header {
+      position: static;
+    }
+    
+    body.work #right-top-name {
+      display: none;
+    } 
+    
+    body.work #right-bottom-name {
+      display: none;
+    }
+    
+    body.work #left-bottom-name {
+      display: none;
+    }
+    
+    body.work #content {
+      align-items: center;
+    }
+    
+    body.work #key {
+      position: static;
+      flex-direction: column;
+      align-items: center;
+      margin:0;
+/*       font-size: .8em; */
+    }
+    
+    body.work #key li {
+      margin: 15px;
+      padding-bottom: 4px;
+      height: 20px;
+      display: flex;
+    }
+    
+    body.work #key svg {
+      width: 80px;
+      height: 20px;
+      align-self: center;
+    }
+}
+
 
 body.work-feature #description {
   margin-top: 25vh;
