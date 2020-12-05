@@ -21,7 +21,9 @@
       <header id="header">
         <h2 class="heading-primary"><a href="/work/">Work</a></h2>
       </header>
+
       <main id="content">
+        <!-- WORK KEY -->
         <ul id="key">
           <li>
             <svg viewBox="0 0 53 12" fill="transparent">
@@ -73,29 +75,79 @@
             <span>Publication</span>
           </li>
         </ul>
-        <div class="work">
-          <a href="/work/ksubi.html">
-            <svg viewBox="0 0 200 200" width="18%">
-              <circle cx="100" cy="100" r="100" fill="#EFCBDD" />
-            </svg>
-          </a>
-          <a href="/work/ksubi.html">
-            <rect x="691" y="218" width="253" height="400" fill="#FD9363" />
-          </a>
-          <a href="/work/ksubi.html">
-            <svg
-              class="triangle"
-              x="400"
-              y="200"
-              width="200"
-              viewBox="0 0 12 12"
-              fill="#51BAE5"
-            >
-              <path d="M 0 12 L 12 12 L 6 0 z" />
-            </svg>
-          </a>
+        <!-- |------| -->
+        
+        <!-- HIDDEN SHAPE DEFINITIONS -->
+        <svg style="display:none;">
+          <defs>
+            <ellipse id="shape-branding" cx="100" cy="100" rx="100" ry="100" fill="inherit"/>
+          </defs>
+        </svg>
+        <svg style="display:none;">
+          <defs>
+            <rect id="shape-illustration" width="100%" height="100%" fill="inherit" />
+          </defs>
+        </svg>
+        <svg style="display:none;">
+          <defs>
+            <path id="shape-publication" d="M 0 12 L 12 12 L 6 0 z" fill="inherit" />
+          </defs>
+        </svg>
+        <svg style="display:none;">
+          <defs>
+            <path id="shape-publication-long" d="M 0 18 L 12 18 L 6 0 z" fill="inherit" />
+          </defs>
+        </svg>
+        <!-- |-----------------------| -->
+
+        <div class="work-items">
+          <ul>
+            <li class="work-item" style="margin-left: 64vw;">
+              <a href="/work/ksubi-leopard.html" style="width: 20vw;">
+                <svg viewBox="0 0 200 300">
+                  <use href="#shape-illustration" fill="#FD9363"/>
+                </svg>
+              </a>
+            </li>
+            <li class="work-item" style="margin-left: 15.2vw; margin-top: 5vw;">
+              <a href="/work/insight-faces.html" style="width: 15vw;">
+                <svg viewBox="0 0 140 400">
+                  <use href="#shape-illustration" fill="#D1D1D1"/>
+                </svg>
+              </a>
+            </li>
+            <li class="work-item" style="margin-left: 53vw; margin-top: -28vw;">
+              <a href="#" style="width: 28vw;">
+                <svg viewBox="0 0 200 200">
+                  <use href="#shape-branding" fill="#252835"/>
+                </svg>
+              </a>
+            </li>
+            <li class="work-item" style="margin-left: 42vw; margin-top: 10vw;">
+              <a href="#" style="width: 19vw;">
+                <svg viewBox="0 0 12 12">
+                  <use href="#shape-publication" fill="#71D8C8"/>
+                </svg>
+              </a>
+            </li>
+            <li class="work-item" style="margin-left: 13vw; margin-top: 10vw;">
+              <a href="#" style="width: 22vw;">
+                <svg viewBox="0 0 200 200">
+                  <use href="#shape-branding" fill="pink"/>
+                </svg>
+              </a>
+            </li>
+            <li class="work-item" style="margin-left: 68vw; margin-top: -14vw;">
+              <a href="#" style="width: 25vw;">
+                <svg viewBox="0 0 12 18">
+                  <use href="#shape-publication-long" fill="#F26761"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
       </main>
+
       <footer id="footer">
         <h2 class="heading-primary"><a href="/about.html">About</a></h2>
       </footer>

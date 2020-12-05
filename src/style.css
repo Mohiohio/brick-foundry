@@ -8,6 +8,10 @@ html{
   --color-primary: #9fd9aa;
   --color-bg: #fdf9e3;
   --edge-spacing: 1.5rem;
+  --transition: all 0.5s ease;
+  --heading-primary-size: 4.6875em;
+  --heading-primary-size-side-nav-mob: 1.5625rem;
+  --work-description-width: 14rem;
 
   font-family: neuzeit-grotesk, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: var(--color-primary);
@@ -23,19 +27,37 @@ html{
 body {
 }
 
+img{
+  max-width: 100%;
+}
+
 /* ==== TEXT ==== */
+h1,h2,h3,h4,h5,h6,p,ul,ol{
+  margin-bottom: 1rem;
+}
+p {
+  line-height: 1.4;
+}
 a {
   color: var(--color-primary);
   text-decoration: none;
+  outline: none;
+  transition: var(--transition);
+}
+a:hover {
+  opacity: 0.65 !important;
 }
 .heading-primary {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 4.6875em;
+  font-size: var(--heading-primary-size);
   line-height: 0.70;
+  margin-bottom: 0;
 }
 .heading-secondary{
   font-size: 1.25rem;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 /* ==== MAIN ELEMENTS ==== */
@@ -50,6 +72,7 @@ a {
 }
 #header {
   position: fixed;
+  z-index: 5;
   top: 0;
   left:0;
   padding-top: var(--edge-spacing);
@@ -90,7 +113,7 @@ a {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 0.6875rem;
-  z-index: 5;
+  z-index: 10;
 }
 #left-top-name {
   writing-mode: vertical-rl;
@@ -146,7 +169,28 @@ a {
 }
 
 
-/*  Home page */
+.side-nav {
+  writing-mode: vertical-rl;
+  padding-right: var(--edge-spacing);
+}
+.side-nav .heading-primary {
+  display: inline-block;
+}
+
+@media screen and (max-width: 667px) {
+  .side-nav .heading-primary{
+    font-size: var(--heading-primary-size-side-nav-mob);
+  }
+}
+.side-nav .side-nav__about{
+  transform: rotate(180deg);
+}
+.side-nav .side-nav__about a{
+  opacity: 0.25;
+}
+
+
+/* ==== Home page ==== */
 
 .page-home #content {
   display: flex;
@@ -155,11 +199,15 @@ a {
   justify-content: space-between;
 }
 
-/*  Work page */
+/* ==== Work page ==== */
+
+.page-work #footer{
+  position:relative;
+}
 
 .page-work #key {
-  position: fixed;
-  top: 20vh;
+  margin-top: 15vh;
+  padding-top: 5rem;
   margin-left: var(--edge-spacing);
   transform: translate(-1rem);
 }
@@ -171,92 +219,199 @@ a {
   font-weight: bold;
 }
 .page-work #key svg {
-  width: 120px;
-  height: 20px;
+  width: 7.5rem;
+  height: 1.25rem;
 }
+
+.work-items{
+  padding-bottom: 50vh;
+}
+.work-item {
+}
+  .work-item a{
+    display:block;
+    /* transform: translate(-50%,0); */
+    width:200px;
+    height:auto;
+    transition: var(--transition);
+  }
 
 @media screen and (max-width: 667px) {
-    
-    .page-work #right-bottom-name {
-      display: none;
-    }
-    
-    .page-work #left-bottom-name {
-      display: none;
-    }
-    
-    .page-work #key {
-      position: static;
-      margin-top: 10rem;
-      flex-direction: column;
-      align-items: center;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    .page-work #key li {
-      margin: 15px;
-      padding-bottom: 4px;
-      height: 20px;
-      display: flex;
-    }
-    
-    .page-work #key svg {
-      width: 80px;
-      height: 20px;
-      align-self: center;
-    }
+
+  .page-work #right-bottom-name {
+    display: none;
+  }
+  
+  .page-work #left-bottom-name {
+    display: none;
+  }
+  
+  .page-work #key {
+    margin-top: 20vh;
+    transform: translate(0);
+    padding-top: 0;
+    margin-bottom: 5vh;
+    position: static;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .page-work #key li {
+    margin: 15px;
+    padding-bottom: 4px;
+    height: 20px;
+    display: flex;
+  }
+  
+  .page-work #key svg {
+    width: 80px;
+    height: 20px;
+    align-self: center;
+  }
 }
 
+/* ==== WORK SINGLE PAGES ==== */
 
-.page-work-single #description {
-  margin-top: 25vh;
-  margin-left: 25px;
-  width: 200px;
-  position: fixed;
-}
-
-.page-work-single #description h3 {
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-bottom: 30px;
+.page-work-single #right-top-name,
+.page-work-single #left-bottom-name,
+.page-work-single #right-bottom-name{
+  display:none;
 }
 
-.page-work-single #description #about {
-  font-size: 18px;
-  line-height: 1.5;
+.work-details {
+  padding: 0 var(--edge-spacing);
+  text-align: center;
+  z-index: 0;
+}
+.work-description {
+  margin: 2rem auto 4rem;
+  max-width:100%;
+  width: calc(var(--work-description-width));
 }
 
-.page-work-single .heading-primary {
-  font-size: 65px;
+.page-work-single .section{
+  position: relative;
+  z-index: 1;
 }
 
-.page-work-single #work {
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  transform: matrix(0, 1, -1, 0, 0, 0);
-  right: 0;
-  top: 70px;
+.section {
+  padding-left: calc(var(--edge-spacing) + var(--heading-primary-size-side-nav-mob) + 1rem);
+  padding-right: calc(var(--edge-spacing) + var(--heading-primary-size-side-nav-mob) + 1rem);
 }
 
-.page-work-single #header #about {
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  transform: matrix(0, -1, 1, 0, 0, 0);
-  right: -12;
-  top: 265px;
-  opacity: 0.25;
+.section--hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+.section--hero-peek-style{
+  align-items: flex-start;
+  padding-top: 70vh;
+  min-height: 0;
 }
 
-.page-work-single .main {
-  margin-left: 30vw;
-  margin-top: 10vh;
+.section--min-height-screen{
+  min-height: 100vh;
 }
-.page-work-single .images img {
-  max-width: 100vw;
+.section--full-bleed {
+  padding-left: 0;
+  padding-right: 0;
 }
+
+.page-work-single #footer {
+  position: static;
+  margin-top: 50vh;
+}
+
+/* for small only */
+@media screen and (max-width: 667px) {
+  .section--hero{
+    min-height: 100vh !important;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+  }
+  .section--hero-peek-style {
+    /* padding-top: 15vh; */
+  }
+
+  .section--hero-rotate-left-for-mobile img{
+    transform: rotate(-90deg);
+    max-width: 130%; /* this makes a naturally landscape image fill a bit more of the screen when rotated for mobile, as otherwise css keeps it constrained by it's 'natural' landscape size */
+  }
+
+  .section--hero-rotate-right-for-mobile img{
+    transform: rotate(90deg);
+    max-width: 130%; /* this makes a naturally landscape image fill a bit more of the screen when rotated for mobile, as otherwise css keeps it constrained by it's 'natural' landscape size */
+  }
+
+  .section--3up {
+    margin-top: 8rem;
+  }
+  .section--3up img + img{
+    margin-top: calc(var(--edge-spacing) + var(--heading-primary-size-side-nav-mob) + 1rem);
+  }
+
+  .page-work-single #footer .heading-secondary{
+    font-size: 1rem;
+  }
+  .page-work-single #footer p{
+    font-size: 0.625rem;
+  }
+}
+
+/* for large only */
+@media screen and (min-width: 668px) {
+  .work-details {
+    position: fixed;
+    top: 25vh;
+    left: 0;
+    width: 24rem;
+    max-width:100%;
+    text-align: left;
+  }
+  .work-description{
+    margin-left: 0;
+  }
+
+  .section--hero-pad {
+    padding-left: calc(var(--edge-spacing) + var(--work-description-width));
+    padding-right: calc(var(--edge-spacing) + var(--work-description-width));
+  }
+
+  .section--hero-pad-pull-right {
+    padding-left: calc(var(--edge-spacing) + var(--work-description-width) + 2rem);
+    padding-right: calc(var(--edge-spacing) + var(--heading-primary-size) + 2rem);
+    justify-content: right;
+  }
+
+  .section--3up {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .section--3up > img {
+    width: 33.33333%;
+    flex-shrink: 1;
+    flex-grow: 0;
+  }
+  .section--3up > img:nth-child(1) {
+    width: 36%;
+  }
+  .section--3up > img:nth-child(2) {
+    margin-top: 10vh;
+    width: 32%;
+    transform: scale(1.1) translate(-0.5rem,0);
+  }
+  .section--3up > img:nth-child(3) {
+    margin-top: 4vh;
+    width: 32%;
+  }
+}
+
+/* ==== ABOUT PAGE ==== */
 
 .page-about #footer li {
   font-size: large;
@@ -312,7 +467,7 @@ a {
 }
 
 .page-about #footer div > p,
-li {
+.page-about #footer li {
   margin-top: 40px;
   margin-bottom: 40px;
 }
