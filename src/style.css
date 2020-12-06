@@ -169,11 +169,14 @@ a:hover {
 }
 
 
-.side-nav {
+#header.side-nav {
   writing-mode: vertical-rl;
   padding-right: var(--edge-spacing);
+  right: 0;
+  left: auto;
+  width: auto;
 }
-.side-nav .heading-primary {
+#header.side-nav .heading-primary {
   display: inline-block;
 }
 
@@ -311,6 +314,14 @@ a:hover {
   min-height: 0;
 }
 
+.section--image-row {
+  display:flex;
+}
+.section--image-row img{
+  min-width: 0;
+  min-height: 0;
+}
+
 .section--min-height-screen{
   min-height: 100vh;
 }
@@ -345,11 +356,18 @@ a:hover {
     max-width: 130%; /* this makes a naturally landscape image fill a bit more of the screen when rotated for mobile, as otherwise css keeps it constrained by it's 'natural' landscape size */
   }
 
-  .section--3up {
+  .section--image-row {
     margin-top: 8rem;
+    flex-direction: column;
+    justify-content: center;
   }
-  .section--3up img + img{
-    margin-top: calc(var(--edge-spacing) + var(--heading-primary-size-side-nav-mob) + 1rem);
+  .section--image-row img {
+    margin-top: 0 !important;
+    width: auto !important;
+    transform: none !important;
+  }
+  .section--image-row img + img{
+    margin-top: calc(var(--edge-spacing) + var(--heading-primary-size-side-nav-mob) + 1rem) !important;
   }
 
   .page-work-single #footer .heading-secondary{
@@ -385,29 +403,16 @@ a:hover {
     justify-content: right;
   }
 
-  .section--3up {
-    display: flex;
+  .section--image-row {
     align-items: center;
     width: 100%;
     padding-left: 0;
     padding-right: 0;
+    overflow-x: hidden;
   }
-  .section--3up > img {
-    width: 33.33333%;
+  .section--image-row > img {
     flex-shrink: 1;
     flex-grow: 0;
-  }
-  .section--3up > img:nth-child(1) {
-    width: 36%;
-  }
-  .section--3up > img:nth-child(2) {
-    margin-top: 10vh;
-    width: 32%;
-    transform: scale(1.1) translate(-0.5rem,0);
-  }
-  .section--3up > img:nth-child(3) {
-    margin-top: 4vh;
-    width: 32%;
   }
 }
 
