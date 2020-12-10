@@ -418,61 +418,123 @@ a:hover {
 
 /* ==== ABOUT PAGE ==== */
 
-.page-about #footer li {
-  font-size: large;
-  text-transform: uppercase;
-  font-weight: bold;
+.page-about #left-bottom-name,
+.page-about #right-bottom-name {
+  display:none;
 }
 
 .page-about #footer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows:
-    [detail] 1fr
-    [headers] 100px;
-  align-content: end;
-  grid-auto-flow: column;
-  min-height: 50vh;
-  margin-right: 20px;
-  margin-left: 20px;
+  display:none;
 }
 
-.page-about #footer .services {
-  text-align: left;
-}
-.page-about #footer .about {
+.about-sections {
+  display: flex;
   text-align: center;
+  flex-direction: column;
+  width: 100%;
+}
+.about-section {
+  min-height: 100vh;
+  padding: var(--edge-spacing);
+  flex-grow: 1;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
-.page-about #footer .contact {
-  text-align: right;
+.about-section p {
+  margin-bottom: 1.4rem;
 }
 
-@media screen and (max-width: 1000px) {
-  .page-about #header {
-    position: static;
+.about-section .heading-secondary{
+  border-bottom: 2px solid;
+  display: inline-block;
+  width: 13em;
+  max-width: 100%;
+}
+
+.about-section li:not(:first-child) .heading-secondary{
+  margin-top: 3rem;
+}
+
+.about-section .heading-primary {
+  margin-top: 3rem;
+}
+
+
+/* for small only */
+@media screen and (max-width: 667px) {
+  .about-sections {
+    scroll-snap-type: y mandatory;
+    scroll-snap-destination: 0% 100%;
+    scroll-snap-points-y: repeat(100%);
+    height: 100vh;
+    overflow: scroll;
   }
-  .page-about #footer {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-auto-flow: row;
-    justify-content: center;
-    position: static;
-    align-content: start;
+
+  .about-section {
+    scroll-snap-align: start;
   }
-  .page-about #footer .contact {
-    text-align: center;
-  }
-  .page-about #footer .about {
-    text-align: center;
-  }
-  .page-about #footer .services {
-    text-align: center;
+  
+  .about-section .heading-secondary {
+    width: 19rem;
   }
 }
 
-.page-about #footer div > p,
-.page-about #footer li {
-  margin-top: 40px;
-  margin-bottom: 40px;
+/* @media screen and (max-width: 740px) {
+  .about-sections .heading-primary{
+    font-size: 2.5rem;
+  }
+} */
+@media screen and (max-width: 360px) {
+  .about-sections .heading-primary{
+    font-size: 3.5rem;
+  }
+}
+@media screen and (min-width: 668px) and (max-width: 799px) {
+  .about-sections .heading-secondary{
+    font-size: 0.85rem;
+    width: 100%;
+  }
+  .about-sections .heading-primary{
+    font-size: 2.4rem;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 959px) {
+  .about-sections .heading-secondary{
+    font-size: 1rem;
+  }
+  .about-sections .heading-primary{
+    font-size: 3rem;
+  }
+  .about-section p {
+    margin-bottom: 1.25rem;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1140px) {
+  .about-sections .heading-primary{
+    font-size: 3.4rem;
+  }
+}
+
+/* for large only */
+@media screen and (min-width: 668px) {
+  .about-sections{
+    flex-direction: row;
+  }
+  .about-section{
+    flex-basis: 33.33%;
+  }
+  .about-section--services {
+    text-align: left;
+    order: 1;
+  }
+  .about-section--about {
+    order: 2;
+  }
+  .about-section--contact {
+    text-align: right;
+    order: 3;
+  }
 }

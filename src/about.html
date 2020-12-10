@@ -11,41 +11,50 @@
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body class="page-about">
+    <nav>
+      <span id="left-top-name" class="name"><a href="/">Brick<br />Foundry Co.</a></span>
+      <span id="right-top-name" class="name"><a href="/">Brick<br />Foundry Co.</a></span>
+      <span id="left-bottom-name" class="name"><a href="/">Brick<br />Foundry Co.</a></span>
+      <span id="right-bottom-name" class="name"><a href="/">Brick<br />Foundry Co.</a></span>
+    </nav>
     <div id="container">
-      <div id="header">
-        <span id="left-top-name" class="name">
-          <a href="/">Brick<br />Foundry Co.</a></span
-        >
+      <header id="header">
         <h2 class="heading-primary"><a href="/work/">Work</a></h2>
-        <span id="right-top-name" class="name">
-          <a href="/">Brick<br />Foundry Co.</a></span
-        >
-      </div>
-      <div id="content">
+      </header>
+      <main id="content">
 
-        <ul class="detail services">
-          <li>Illustration</li>
-          <li>Graphic Design</li>
-          <li>Art Direction</li>
-        </ul>
-        <h2 class="heading services">Services</h2>
-        <div class="detail about">
-          <p>Welcome to the The Brick Foundry</p>
-          <p>
-            A creative studio based in Otepoti, Dunedin - Open to anything(ish).
-          </p>
-          <p>Founded by Finn Gallagher</p>
+        <div class="about-sections">
+          <section class="about-section about-section--about">
+            <p>Welcome to the The Brick Foundry</p>
+            <p>A creative studio.</p>
+            <p>Based in Otepoti, Dunedin.</p>
+            <p>Open to anything(ish).</p>
+            <!-- <p>Founded by Finn Gallagher</p> -->
+            <h2 class="heading-primary">About</h2>
+          </section>
+
+          <section class="about-section about-section--services">
+            <ul class="detail services">
+              <li><a href="#" class="heading-secondary">Illustration</a></li>
+              <li><a href="#" class="heading-secondary">Graphic Design</a></li>
+              <li><a href="#" class="heading-secondary">Riso Printing</a></li>
+            </ul>
+            <h2 class="heading-primary">Services</h2>
+          </section>
+
+          <section class="about-section about-section--contact">
+            <ul class="detail contact">
+              <li>
+                <a href="mailto:hello@brickfoundry.co" class="heading-secondary">hello@brickfoundry.co</a>
+              </li>
+              <li><a href="tel:0064223974701" class="heading-secondary">+64 2239 74701</a></li>
+              <li><a href="#" class="heading-secondary">InstagramTODO</a></li>
+            </ul>
+            <h2 class="heading-primary">Contact</h2>
+          </section>
         </div>
-        <h2 class="heading about">About</h2>
-        <ul class="detail contact">
-          <li>
-            <a href="mailto:hello@brickfoundry.co">hello@brickfoundry.co</a>
-          </li>
-          <li>+64 2239 74701</li>
-        </ul>
-        <h2 class="heading contact">Contact</h2>
-      </div>
-      <footer id="footer"></footer>
+
+      </main>
     </div>
   </body>
 </html>
