@@ -35,9 +35,24 @@
 
           <section class="about-section about-section--services">
             <ul class="detail services">
-              <li><a href="#" class="heading-secondary">Illustration</a></li>
-              <li><a href="#" class="heading-secondary">Graphic Design</a></li>
-              <li><a href="#" class="heading-secondary">Riso Printing</a></li>
+              <li class="about-service js-about-service">
+                <a href="#" class="heading-secondary js-about-service-trigger">Illustration</a>
+                <div class="about-service-content">
+                  <p>Offering all of the illustration one needs to fill their boots. Ranging from completly hand-rendered outcomes to digital and large scale murals with a preference to keep things analogue when appropriate.</p>
+                </div>
+              </li>
+              <li class="about-service js-about-service">
+                <a href="#" class="heading-secondary js-about-service-trigger">Graphic Design</a>
+                <div class="about-service-content">
+                  <p>Offering all of the illustration one needs to fill their boots. Ranging from completly hand-rendered outcomes to digital and large scale murals with a preference to keep things analogue when appropriate.</p>
+                </div>
+              </li>
+              <li class="about-service js-about-service">
+                <a href="#" class="heading-secondary js-about-service-trigger">Riso Printing</a>
+                <div class="about-service-content">
+                  <p>Offering all of the illustration one needs to fill their boots. Ranging from completly hand-rendered outcomes to digital and large scale murals with a preference to keep things analogue when appropriate.</p>
+                </div>
+              </li>
             </ul>
             <h2 class="heading-primary">Services</h2>
           </section>
@@ -56,5 +71,48 @@
 
       </main>
     </div>
+
+    <!-- just a little js to show/hide things -->
+    <script>
+
+      // a simple function which works on sets of items to show and hide them in relation to each other within the same set
+      const shower = function() {
+
+        const resetChildrenDefault = true; // default
+        const triggers = document.querySelectorAll('.js-about-service-trigger');
+        const allServices = document.querySelectorAll('.js-about-service');
+
+        Array.prototype.forEach.call(triggers, function(el, index, array){
+          const thisTrigger = el;
+          const thisService = thisTrigger.parentNode;
+          
+          // handlers onto any triggers
+          thisTrigger.addEventListener('click', function(e) {
+            e.preventDefault();
+            const thisServiceIsActive = thisService.classList.contains('is-active');
+
+            if(!thisServiceIsActive) {
+
+              // remove active status from this service
+              Array.prototype.forEach.call(allServices, function(target, index, array){
+                if(target.classList.contains('is-active')){
+                  target.classList.remove('is-active');
+                }
+              })
+
+              // add active status to this service
+              thisService.classList.add('is-active');
+            } else {
+              thisService.classList.remove('is-active');
+            }
+          });
+        })
+
+      }
+
+      // init showers
+      shower();
+
+    </script>
   </body>
 </html>
