@@ -462,6 +462,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: initial;
+  overflow: hidden;
 }
 .work-section--rambling-images .image-wrapper{
   margin: auto;
