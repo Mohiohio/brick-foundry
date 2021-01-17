@@ -439,6 +439,11 @@ a:hover {
   min-height: 0;
 }
 
+.work-section--hero-peek-style-two{
+  align-items: flex-start;
+  padding-top: 20vh;
+  min-height: 0;
+}
 /* ============ WORK SECTIONS ============ */
 
 /* WORK SECTION - IMAGE ROW */
