@@ -5,24 +5,31 @@
     <meta name="description" content="" />
     <meta name="theme-color" content="#fdf9e3" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    
+
     <link rel="stylesheet" href="https://use.typekit.net/eia3rqx.css" />
     <link rel="stylesheet" href="/reset.css" />
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body class="page-about">
     <nav>
-      <span id="left-top-name" class="name"><a href="/">Brick<br />Foundry Co.</a></span>
-      <span id="right-top-name" class="name"><a href="/">Brick<br />Foundry Co.</a></span>
-      <span id="left-bottom-name" class="name"><a href="/">Brick<br />Foundry Co.</a></span>
-      <span id="right-bottom-name" class="name"><a href="/">Brick<br />Foundry Co.</a></span>
+      <span id="left-top-name" class="name"
+        ><a href="/">Brick<br />Foundry Co.</a></span
+      >
+      <span id="right-top-name" class="name"
+        ><a href="/">Brick<br />Foundry Co.</a></span
+      >
+      <span id="left-bottom-name" class="name"
+        ><a href="/">Brick<br />Foundry Co.</a></span
+      >
+      <span id="right-bottom-name" class="name"
+        ><a href="/">Brick<br />Foundry Co.</a></span
+      >
     </nav>
     <div id="container">
       <header id="header">
         <h2 class="heading-primary"><a href="/work/">Work</a></h2>
       </header>
       <main id="content">
-
         <div class="about-sections">
           <section class="about-section about-section--about">
             <p>Welcome to the The Brick Foundry</p>
@@ -36,21 +43,42 @@
           <section class="about-section about-section--services">
             <ul class="detail services">
               <li class="about-service js-about-service">
-                <a href="#" class="heading-secondary js-about-service-trigger">Illustration</a>
+                <a href="#" class="heading-secondary js-about-service-trigger"
+                  >Illustration</a
+                >
                 <div class="about-service-content">
-                  <p>Offering all of the illustration one needs to fill their boots. Ranging from completly hand-rendered outcomes to digital and large scale murals with a preference to keep things analogue when appropriate.</p>
+                  <p>
+                    Offering all of the illustration one needs to fill their
+                    boots. Ranging from completly hand-rendered outcomes to
+                    digital and large scale murals with a preference to keep
+                    things analogue when appropriate.
+                  </p>
                 </div>
               </li>
               <li class="about-service js-about-service">
-                <a href="#" class="heading-secondary js-about-service-trigger">Graphic Design</a>
+                <a href="#" class="heading-secondary js-about-service-trigger"
+                  >Graphic Design</a
+                >
                 <div class="about-service-content">
-                  <p>Offering all of the illustration one needs to fill their boots. Ranging from completly hand-rendered outcomes to digital and large scale murals with a preference to keep things analogue when appropriate.</p>
+                  <p>
+                    Offering all of the illustration one needs to fill their
+                    boots. Ranging from completly hand-rendered outcomes to
+                    digital and large scale murals with a preference to keep
+                    things analogue when appropriate.
+                  </p>
                 </div>
               </li>
               <li class="about-service js-about-service">
-                <a href="#" class="heading-secondary js-about-service-trigger">Riso Printing</a>
+                <a href="#" class="heading-secondary js-about-service-trigger"
+                  >Riso Printing</a
+                >
                 <div class="about-service-content">
-                  <p>Offering all of the illustration one needs to fill their boots. Ranging from completly hand-rendered outcomes to digital and large scale murals with a preference to keep things analogue when appropriate.</p>
+                  <p>
+                    Offering all of the illustration one needs to fill their
+                    boots. Ranging from completly hand-rendered outcomes to
+                    digital and large scale murals with a preference to keep
+                    things analogue when appropriate.
+                  </p>
                 </div>
               </li>
             </ul>
@@ -60,59 +88,70 @@
           <section class="about-section about-section--contact">
             <ul class="detail contact">
               <li>
-                <a href="mailto:hello@brickfoundry.co" class="heading-secondary">hello@brickfoundry.co</a>
+                <a href="mailto:hello@brickfoundry.co" class="heading-secondary"
+                  >hello@brickfoundry.co</a
+                >
               </li>
-              <li><a href="tel:0064223974701" class="heading-secondary">+64 2239 74701</a></li>
-              <li><a href="#" class="heading-secondary">InstagramTODO</a></li>
+              <li>
+                <a href="tel:0064223974701" class="heading-secondary"
+                  >+64 2239 74701</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/thebrickfoundry"
+                  class="heading-secondary"
+                  >Instagram</a
+                >
+              </li>
             </ul>
             <h2 class="heading-primary">Contact</h2>
           </section>
         </div>
-
       </main>
     </div>
 
     <!-- just a little js to show/hide things -->
     <script>
-
       // a simple function which works on sets of items to show and hide them in relation to each other within the same set
-      const shower = function() {
-
+      const shower = function () {
         const resetChildrenDefault = true; // default
-        const triggers = document.querySelectorAll('.js-about-service-trigger');
-        const allServices = document.querySelectorAll('.js-about-service');
+        const triggers = document.querySelectorAll(".js-about-service-trigger");
+        const allServices = document.querySelectorAll(".js-about-service");
 
-        Array.prototype.forEach.call(triggers, function(el, index, array){
+        Array.prototype.forEach.call(triggers, function (el, index, array) {
           const thisTrigger = el;
           const thisService = thisTrigger.parentNode;
-          
+
           // handlers onto any triggers
-          thisTrigger.addEventListener('click', function(e) {
+          thisTrigger.addEventListener("click", function (e) {
             e.preventDefault();
-            const thisServiceIsActive = thisService.classList.contains('is-active');
+            const thisServiceIsActive = thisService.classList.contains(
+              "is-active"
+            );
 
-            if(!thisServiceIsActive) {
-
+            if (!thisServiceIsActive) {
               // remove active status from this service
-              Array.prototype.forEach.call(allServices, function(target, index, array){
-                if(target.classList.contains('is-active')){
-                  target.classList.remove('is-active');
+              Array.prototype.forEach.call(
+                allServices,
+                function (target, index, array) {
+                  if (target.classList.contains("is-active")) {
+                    target.classList.remove("is-active");
+                  }
                 }
-              })
+              );
 
               // add active status to this service
-              thisService.classList.add('is-active');
+              thisService.classList.add("is-active");
             } else {
-              thisService.classList.remove('is-active');
+              thisService.classList.remove("is-active");
             }
           });
-        })
-
-      }
+        });
+      };
 
       // init showers
       shower();
-
     </script>
   </body>
 </html>
