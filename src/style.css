@@ -185,10 +185,10 @@ a:hover {
 }
 @media screen and (max-width: 667px) {
   #right-top-name {
-    writing-mode: vertical-lr;
+    writing-mode: vertical-rl;
   }
   #left-bottom-name {
-    writing-mode: vertical-lr;
+    writing-mode: vertical-rl;
     transform: rotate(180deg);
   }
   #right-bottom-name {
@@ -219,7 +219,7 @@ a:hover {
 
 #header.side-nav {
   writing-mode: vertical-rl;
-  padding-right: var(--edge-spacing);
+  margin-right: var(--edge-spacing);
   right: 0;
   left: auto;
   width: auto;
@@ -542,6 +542,10 @@ a:hover {
 }
 .page-work-single #footer.extra-margin--small {
   margin-top: 50vh;
+}
+
+.page-work-single #footer p{
+  font-size: 0.75rem;
 }
 
 @media screen and (max-width: 667px) {
