@@ -78,24 +78,36 @@
         <!-- |------| -->
         
         <!-- HIDDEN SHAPE DEFINITIONS -->
-        <svg style="display:none;">
+        <svg height="0" width="0">
           <defs>
             <ellipse id="shape-branding" cx="100" cy="100" rx="100" ry="100" fill="inherit"/>
+            <mask id="shape-branding-mask" x="0" y="0" width="100" height="100">
+              <ellipse cx="100" cy="100" rx="100" ry="100" fill="white"/>
+            </mask>
           </defs>
         </svg>
-        <svg style="display:none;">
+        <svg height="0" width="0">
           <defs>
             <rect id="shape-illustration" width="100%" height="100%" fill="inherit" />
+            <mask id="shape-illustration-mask" x="0" y="0" width="100%" height="100%">
+              <rect width="100%" height="100%" fill="white" />
+            </mask>
           </defs>
         </svg>
-        <svg style="display:none;">
+        <svg height="0" width="0">
           <defs>
             <path id="shape-publication" d="M 0 12 L 12 12 L 6 0 z" fill="inherit" />
+            <mask id="shape-publication-mask" x="0" y="0" width="100%" height="100%">
+              <path d="M 0 12 L 12 12 L 6 0 z" fill="white" />
+            </mask>
           </defs>
         </svg>
-        <svg style="display:none;">
+        <svg height="0" width="0">
           <defs>
             <path id="shape-publication-long" d="M 0 18 L 12 18 L 6 0 z" fill="inherit" />
+            <mask id="shape-publication-long-mask" x="0" y="0" width="100%" height="100%">
+              <path d="M 0 18 L 12 18 L 6 0 z" fill="white" />
+            </mask>
           </defs>
         </svg>
         <!-- |-----------------------| -->
@@ -104,88 +116,112 @@
           <ul>
             <li class="work-item" style="margin-left: 64vw;">
               <a href="/work/ksubi-leopard.html" style="width: 20vw;">
-                <svg viewBox="0 0 200 300">
+                <div class="work-item__image" style="background-image: url(../assets/work_hovers/ksubi_leopard.png);"></div>
+                <svg class="work-item__shape" viewBox="0 0 200 300">
                   <use href="#shape-illustration" fill="#FD9363"/>
                 </svg>
               </a>
             </li>
+
             <li class="work-item" style="margin-left: 17vw; margin-top: -5vw;">
               <a href="/work/insight-faces.html" style="width: 15vw;">
-                <svg viewBox="0 0 140 400">
+                <div class="work-item__image" style="background-image: url(../assets/work_hovers/insight_faces.png);"></div>
+                <svg class="work-item__shape" viewBox="0 0 140 400">
                   <use href="#shape-illustration" fill="#E0E8EA"/>
                 </svg>
               </a>
             </li>
+
             <li class="work-item" style="margin-left: 53vw; margin-top: -7vw;">
               <a href="/work/smoko-room.html" style="width: 28vw;">
-                <svg viewBox="0 0 200 200">
+                <div class="work-item__image" style="background-image: url(../assets/work_hovers/smoko_room.png);"></div>
+                <svg class="work-item__shape" viewBox="0 0 200 200">
                   <use href="#shape-branding" fill="#222835"/>
                 </svg>
               </a>
             </li>
+
             <li class="work-item" style="margin-left: 13vw; margin-top: 6vw;">
               <a href="/work/skraps.html" style="width: 20vw;">
-                <svg viewBox="0 0 200 200">
+                <div class="work-item__image" style="background-image: url(../assets/work_hovers/skraps.png);"></div>
+                <svg class="work-item__shape" viewBox="0 0 200 200">
                   <use href="#shape-branding" fill="#D7C3D4"/>
                 </svg>
               </a>
             </li>
+
             <li class="work-item" style="margin-left: 64vw;">
               <a href="/work/insight-mayhem.html" style="width: 20vw;">
-                <svg viewBox="0 0 200 300">
+                <div class="work-item__image" style="background-image: url(../assets/work_hovers/insight_mayhem.png);"></div>
+                <svg class="work-item__shape" viewBox="0 0 200 300">
                   <use href="#shape-illustration" fill="#3EAA77"/>
                 </svg>
               </a>
             </li>
+
             <li class="work-item" style="margin-left: 25vw; margin-top: -5vw;">
               <a href="/work/ilk-publication.html" style="width: 22vw;">
-                <svg viewBox="0 0 12 12">
+                <div class="work-item__image" style="background-image: url(../assets/work_hovers/ilk_publication.png);"></div>
+                <svg class="work-item__shape" viewBox="0 0 12 12">
                   <use href="#shape-publication" fill="#1A3DFF"/>
                 </svg>
               </a>
             </li>
+
             <li class="work-item" style="margin-left: 60vw; margin-top: 7vw;">
               <a href="/work/insight-dark-cult.html" style="width: 16vw;">
-                <svg viewBox="0 0 140 400">
+                <div class="work-item__image" style="background-image: url(../assets/work_hovers/insight_dark_cult.png);"></div>
+                <svg class="work-item__shape" viewBox="0 0 140 400">
                   <use href="#shape-illustration" fill="#9CEAF4"/>
                 </svg>
               </a>
             </li>
+
             <li class="work-item" style="margin-left: 15vw; margin-top: -15vw;">
               <a href="/work/side-on.html" style="width: 25vw;">
-                <svg viewBox="0 0 200 200">
+                <div class="work-item__image" style="background-image: url(../assets/work_hovers/side_on.png);"></div>
+                <svg class="work-item__shape" viewBox="0 0 200 200">
                   <use href="#shape-branding" fill="#EFCBDD"/>
                 </svg>
               </a>
             </li>
+
             <li class="work-item" style="margin-left: 67vw; margin-top: 10vw;">
               <a href="/work/ksubi-tiger.html" style="width: 26vw;">
-                <svg viewBox="0 0 200 200">
+                <div class="work-item__image" style="background-image: url(../assets/work_hovers/ksubi_tiger.png);"></div>
+                <svg class="work-item__shape" viewBox="0 0 200 200">
                   <use href="#shape-illustration" fill="#FFFFFF"/>
                 </svg>
               </a>
             </li>
+
             <li class="work-item" style="margin-left: 35vw; margin-top: -12vw;">
               <a href="/work/humanly-delights.html" style="width: 17vw;">
-                <svg viewBox="0 0 200 300">
+                <div class="work-item__image" style="background-image: url(../assets/work_hovers/humanly_delights.png);"></div>
+                <svg class="work-item__shape" viewBox="0 0 200 300">
                   <use href="#shape-illustration" fill="#e6f160"/>
                 </svg>
               </a>
             </li>
+
             <li class="work-item" style="margin-left: 9vw; margin-top: 3vw;">
               <a href="/work/sprout-me.html" style="width: 11vw;">
-                <svg viewBox="0 0 200 200">
+                <div class="work-item__image" style="background-image: url(../assets/work_hovers/sprout_me.png);"></div>
+                <svg class="work-item__shape" viewBox="0 0 200 200">
                   <use href="#shape-branding" fill="#DD9585"/>
                 </svg>
               </a>
             </li>
+
             <li class="work-item" style="margin-left: 60vw; margin-top: 5vw;">
               <a href="/work/spudibuck.html" style="width: 20vw;">
-                <svg viewBox="0 0 120 180">
+                <div class="work-item__image" style="background-image: url(../assets/work_hovers/spudibuck.png);"></div>
+                <svg class="work-item__shape" viewBox="0 0 120 180">
                   <use href="#shape-illustration" fill="#6A5240"/>
                 </svg>
               </a>
             </li>
+
           </ul>
         </div>
       </main>

@@ -9,6 +9,7 @@ html{
   --color-bg: #fdf9e3;
   --edge-spacing: 1.5rem;
   --transition: all 0.5s ease;
+  --transition-fast: all 0.2s ease;
   --heading-primary-size: 4.6875em;
   --heading-primary-size-side-nav-mob: 1.5625rem;
   --work-description-width: 14rem;
@@ -286,10 +287,45 @@ a:hover {
 }
   .work-item a{
     display:block;
-    /* transform: translate(-50%,0); */
     width:200px;
     height:auto;
     transition: var(--transition);
+    position: relative;
+  }
+  .work-item a:hover,
+  .work-item a:focus {
+    opacity: 1 !important;
+    transition: transform 0.4s ease;
+    transform: scale(1.1);
+  }
+
+  .work-item__image {
+    transition: var(--transition-fast);
+    position: absolute;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale3d(0,0,0); /* note using scale3d helps prevent pixelation on scale up https://stackoverflow.com/questions/9986226/when-scaling-an-element-with-css3-scale-it-becomes-pixelated-until-just-after-t */
+  }
+  .work-item a:hover .work-item__image,
+  .work-item a:focus .work-item__image {
+    opacity: 1;
+    transform: scale3d(1,1,1);
+  }
+
+  .work-item__shape{
+    transition: var(--transition-fast);
+    transform: scale3d(1,1,1);
+  }
+  .work-item a:hover .work-item__shape,
+  .work-item a:focus .work-item__shape {
+    opacity: 0;
+    transform: scale3d(0,0,0);
   }
 
 @media screen and (max-width: 667px) {
