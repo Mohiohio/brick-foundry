@@ -1,7 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="147px" height="137px" viewBox="0 0 147 137" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>square</title>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <polygon id="square" fill="#9FD9AA" fill-rule="nonzero" points="146.581306 0.325357288 0.92130991 0.325357288 0.92130991 136.976021 146.581306 136.976021"></polygon>
-    </g>
-</svg>
+<svg height="137" viewBox="0 0 147 137" width="147" xmlns="http://www.w3.org/2000/svg"><path d="m146.581306.32535729h-145.65999609v136.65066371h145.65999609z" fill="#9fd9aa"/></svg>
