@@ -300,7 +300,6 @@ a:hover {
   }
 
   .work-item__image {
-    transition: var(--transition-fast);
     position: absolute;
     background-position: 50% 50%;
     background-size: contain;
@@ -310,22 +309,17 @@ a:hover {
     width: 100%;
     height: 100%;
     opacity: 0;
-    transform: scale3d(0,0,0); /* note using scale3d helps prevent pixelation on scale up https://stackoverflow.com/questions/9986226/when-scaling-an-element-with-css3-scale-it-becomes-pixelated-until-just-after-t */
   }
   .work-item a:hover .work-item__image,
   .work-item a:focus .work-item__image {
     opacity: 1;
-    transform: scale3d(1,1,1);
   }
 
   .work-item__shape{
-    transition: var(--transition-fast);
-    transform: scale3d(1,1,1);
   }
   .work-item a:hover .work-item__shape,
   .work-item a:focus .work-item__shape {
     opacity: 0;
-    transform: scale3d(0,0,0);
   }
 
 @media screen and (max-width: 667px) {
