@@ -262,11 +262,17 @@ a:hover {
   position:relative;
 }
 
+.page-work .work-items{
+  margin-top: 35vh;
+}
+
 .page-work #key {
-  margin-top: 15vh;
+  position: fixed;
+  top: 20vh;
   padding-top: 5rem;
   margin-left: var(--edge-spacing);
-  transform: translate(-1rem);
+  transform: translate(-1rem); /*account for spacing in the source svgs*/
+  z-index: 1;
 }
 .page-work #key li {
   margin-bottom: 1rem;
@@ -331,6 +337,10 @@ a:hover {
   .page-work #left-bottom-name {
     display: none;
   }
+
+  .page-work .work-items{
+    margin-top: 0;
+  } 
   
   .page-work #key {
     margin-top: 20vh;
