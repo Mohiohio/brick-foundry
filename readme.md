@@ -1,3 +1,10 @@
 # Brick Foundry 
 
-Big Dog Website
+To run the site locally run
+
+`yarn`
+
+then 
+
+`yarn serve`
+
