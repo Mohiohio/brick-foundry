@@ -530,6 +530,7 @@ a:hover {
   flex-direction: column;
   justify-content: initial;
   overflow: hidden;
+  z-index: 0;
 }
 .work-section--rambling-images .image-wrapper{
   margin: auto;
